@@ -10,7 +10,7 @@ procedure LoanCalculationLab is
    interestRate : Float;  --initialize with user input in the initialize section
    years : Integer; --years the loan will be. Initialize with user input in the initialize section.
    oldBalance : Float;
-   fileName : String(1..15);
+   fileName : String(1..10);
    F : File_Type;
 
    procedure LoanCalculations(interestRate : in Float; years : in Integer; oldBalance : in out Float) is 
@@ -160,7 +160,7 @@ begin
        -- output interest of years
        -- close file  
      -----------------------Print to Console-------------------
-      Put_Line("Enter the desired name for your report: ");
+      Put_Line("Enter the desired name for your report (Must be 10 Characters): ");
       Ada.Text_IO.Get(fileName);
       Put_Line("Enter number of years: ");
       Ada.Integer_Text_IO.Get(years);
